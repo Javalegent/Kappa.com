@@ -1,0 +1,95 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.container {
+  display: inline-block;
+  max-width: 800px; /* Add a max-width to prevent the container from getting too wide */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin-right: 10px;
+  width: 100%; /* Make the search bar full-width */
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.app-shortcuts {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.app-shortcuts img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-shortcuts img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(224, 3, 3, 0.7);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allow the search container to wrap on smaller screens */
+  justify-content: center; /* Center the search container horizontally */
+}
+
+/* Add media queries for smaller screens */
+
+@media (max-width: 768px) {
+  .app-shortcuts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .app-shortcuts img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-shortcuts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .app-shortcuts img {
+    width: 40px;
+    height: 40px;
+  }
+  .search-bar {
+    font-size: 14px;
+    padding: 8px;
+  }
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

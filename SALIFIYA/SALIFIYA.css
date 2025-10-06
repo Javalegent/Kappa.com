@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff8a00, #da1b60, #fcb045, #e91e63);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.glass-form {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+    text-align: center;
+}
+
+.glass-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: #333;
+    transition: all 0.3s ease; /* Added transition */
+}
+
+.form-group input:focus, .form-group select:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    outline: none;
+}
+
+.password-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 30px; /* Make space for the eye icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.terms {
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+button:hover {
+    background-image: linear-gradient(90deg, #ff0000, #ff6666);
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.password-group {
+    position: relative;
+}
+
+.password-group .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
